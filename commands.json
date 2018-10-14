@@ -1,0 +1,40 @@
+{
+    "commands" : [
+        {
+            "name" : "exaservice-create",
+            "module" : "exaservice",
+            "cmd" : "create",
+            "args" : ["cpu", "path"]
+        },
+        {
+            "name" : "exaservice-delete",
+            "module" : "exaservice",
+            "cmd" : "delete",
+            "args" : ["id"]
+        },
+        {
+            "name" : "cleanup-clean",
+            "module" : "cleanup",
+            "cmd" : "clean",
+            "args" : []
+        },
+        {
+            "name" : "urlmanager-create",
+            "module" : "urlmanager",
+            "cmd" : "create",
+            "args" : ["www.a.com", "www.b.com", "www.c.com"]
+        },
+        {
+            "name" : "urlmanager-process",
+            "module" : "urlmanager",
+            "cmd" : "process",
+            "args" : ["url"]
+        },
+        {
+            "name" : "test-fail",
+            "module" : "unknown",
+            "cmd" : "invalid",
+            "args" : []
+        }
+    ]
+}

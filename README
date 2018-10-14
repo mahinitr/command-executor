@@ -1,0 +1,8 @@
+The application is Command Executor
+1. The UI shows the list of commands
+2. When the user selects a command, UI shows the form for arguments
+3. After selecting command and giving the arguments, user can click execute button
+4. Once, it is executed the result will be printed on the UI.
+
+The commands are stored in json file with details
+Commands are python modules
