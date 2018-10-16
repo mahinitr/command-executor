@@ -1,10 +1,11 @@
 $(function() {
-
+  var argsHelps = [];
   $("#executeFormDiv").hide();
 
   $("#commandSelect").on('change', function(){
     if(this.value != 0){
         $("#executeFormDiv").show();
+        $('#argumentsHelp').text("Ex: " + argsHelps[this.value - 1]);
     }else{
         $("#executeFormDiv").hide();
     }
@@ -19,6 +20,8 @@ $(function() {
     success: function(result) {
         for(var i=0; i < result["commands"].length; i++){
             var name = result["commands"][i]["name"];
+            var args_help = result["commands"][i]["args_help"];
+            argsHelps.push(args_help);
             var id = i + 1;
             $('#commandSelect').append('<option value="' + id + '">' + name + '</option>');
         };

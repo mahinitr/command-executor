@@ -34,7 +34,7 @@ def fetch_commands():
     try:
         commands = []
         for cmd in COMMANDS:
-            commands.append({"name" : cmd['name']})
+            commands.append({"name" : cmd['name'], "args_help" : cmd['args_help']})
         return jsonify(commands=commands)
     except:
         print traceback.format_exc()
@@ -83,4 +83,4 @@ if __name__ == "__main__":
         sys.exit(0)
     print "Commands loaded - " + str(COMMANDS)
     create_execution_history_table()
-    app.run()
+    app.run(host='0.0.0.0')
